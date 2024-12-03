@@ -9,22 +9,22 @@ export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   // Create a socket connection once the component mounts
-  useEffect(() => {
-    const socketInstance = io("http://localhost:5000"); // replace with your server URL
-    setSocket(socketInstance);
+  // useEffect(() => {
+  //   const socketInstance = io("http://localhost:5000", {}); // replace with your server URL
+  //   setSocket(socketInstance);
 
-    socketInstance.on("connect", () =>
-      console.log("%csocket connected", "color:green")
-    );
+  //   socketInstance.on("connect", () =>
+  //     console.log("%csocket connected", "color:green")
+  //   );
     
-    socketInstance.on("disconnect", () =>
-      console.log("%csocket disconnected", "color:red")
-    );
+  //   socketInstance.on("disconnect", () =>
+  //     console.log("%csocket disconnected", "color:red")
+  //   );
 
-    return () => {
-      if (socketInstance) socketInstance.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     if (socketInstance) socketInstance.disconnect();
+  //   };
+  // }, []);
 
   // Pass the socket instance through the provider's value
   return (
