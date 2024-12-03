@@ -1,4 +1,4 @@
-import Layout from "@/layout/base"
+import Layout from "@/layout/chat"
 
 export default function () {
     return <Layout>
