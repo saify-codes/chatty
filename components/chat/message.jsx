@@ -9,7 +9,7 @@ export default function ({ message, me }) {
       borderRadius="5px"
       maxWidth="200px"
     >
-      {message}
+      <pre>{message}</pre>
     </Box>
   );
 }
